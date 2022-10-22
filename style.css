@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --animation-font: 'Acme', sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background-color: #080808;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--animation-font);
+}
+
+h1 {
+    color: rgb(20, 20, 20);
+    font-size: 5rem;
+    letter-spacing: 17px;
+}
+
+h1 span {
+    margin: 0px;
+    padding: 0px;
+    animation: textAnimate 2.5s linear infinite;
+}
+
+@keyframes textAnimate {
+
+    0%,
+    50% {
+        color: #7bf1a8;
+        filter: blur(2px);
+        text-shadow: 0 0 10px #7bf1a8, 0 0 20px #7bf1a8, 0 0 30px #7bf1a8, 0 0 80px #7bf1a8, 0 0 130px #7bf1a8, 0 0 180px #7bf1a8, 0 0 260px #7bf1a8, 0 0 380px #7bf1a8;
+    }
+
+    50%,
+    75% {
+        color: #f50093;
+        filter: blur(1px);
+        text-shadow: 0 0 10px #f50093, 0 0 20px #f50093, 0 0 30px #f50093, 0 0 80px #f50093, 0 0 130px #f50093, 0 0 180px #f50093, 0 0 260px #f50093, 0 0 380px #f50093;
+    }
+
+    75%,
+    100% {
+        color: #00aaff;
+        filter: blur(0px);
+        text-shadow: 0 0 10px #00aaff, 0 0 20px #00aaff, 0 0 30px #00aaff, 0 0 80px #00aaff, 0 0 130px #00aaff, 0 0 180px #00aaff, 0 0 260px #00aaff, 0 0 380px #00aaff;
+    }
+}
